@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import UtilP.Util;
+
 public class Activity3 extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -61,18 +63,12 @@ public class Activity3 extends AppCompatActivity {
                 if (n2 != 0) {
                     tvv.setText(String.valueOf(n1 / n2));
                 } else {
-                    animation(tvf3);
+                    tvv.setText("");
+                    Util.animation(tvf3);
                 }
             }
         });
 
-
-    }
-
-    public void animation(TextView tv) {
-        AlphaAnimation dis = new AlphaAnimation(1.0f, 0.0f);
-        tv.startAnimation(dis);
-        dis.setDuration(2000);
 
     }
 }

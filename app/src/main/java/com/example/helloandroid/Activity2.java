@@ -3,7 +3,6 @@ package com.example.helloandroid;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -11,9 +10,11 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import CheckInput.CheckInputForm2;
+import UtilP.Util;
+
 public class Activity2 extends AppCompatActivity {
 
-    CheckInputForm2 checkInputForm2 = new CheckInputForm2();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,33 +49,33 @@ public class Activity2 extends AppCompatActivity {
                 boolean flag4 = true;
                 boolean flag5 = true;
 
-                if (!checkInputForm2.checkPhoneNumber(phoneNumber)) {
+                if (!CheckInputForm2.checkPhoneNumber(phoneNumber)) {
                     et1.setBackgroundResource(R.drawable.round_edit_text_2);
-                    animation(tv1);
+                    Util.animation(tv1);
                     flag1 = false;
 
                 }
-                if (!checkInputForm2.checkEmail(email)) {
+                if (!CheckInputForm2.checkEmail(email)) {
                     et2.setBackgroundResource(R.drawable.round_edit_text_2);
-                    animation(tv2);
+                    Util.animation(tv2);
                     flag2 = false;
                 }
 
-                if (!checkInputForm2.checkName(name)) {
+                if (!CheckInputForm2.checkName(name)) {
                     et3.setBackgroundResource(R.drawable.round_edit_text_2);
-                    animation(tv3);
+                    Util.animation(tv3);
                     flag3 = false;
                 }
 
-                if (!checkInputForm2.checkWorkPlace(workPlace)) {
+                if (!CheckInputForm2.checkWorkPlace(workPlace)) {
                     et4.setBackgroundResource(R.drawable.round_edit_text_2);
-                    animation(tv4);
+                    Util.animation(tv4);
                     flag4 = false;
                 }
 
-                if (!checkInputForm2.checkPassWord(password)) {
+                if (!CheckInputForm2.checkPassWord(password)) {
                     et5.setBackgroundResource(R.drawable.round_edit_text_2);
-                    animation(tv5);
+                    Util.animation(tv5);
                     flag5 = false;
                 }
 
@@ -90,12 +91,5 @@ public class Activity2 extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    public void animation(TextView tv) {
-        AlphaAnimation dis = new AlphaAnimation(1.0f, 0.0f);
-        tv.startAnimation(dis);
-        dis.setDuration(2000);
-
     }
 }

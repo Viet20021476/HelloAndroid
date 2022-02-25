@@ -1,24 +1,19 @@
 package com.example.helloandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.TooltipCompat;
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
-import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import CheckInput.CheckInputForm1;
+import UtilP.Util;
 
 public class MainActivity extends AppCompatActivity {
 
-    CheckInputForm1 checkInput = new CheckInputForm1();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,20 +40,20 @@ public class MainActivity extends AppCompatActivity {
                 boolean flag1 = true;
                 boolean flag2 = true;
                 boolean flag3 = true;
-                if (!checkInput.checkAccount(account)) {
+                if (!CheckInputForm1.checkAccount(account)) {
                     et1.setBackgroundResource(R.drawable.round_edit_text_2);
-                    animation(tvfw1);
+                    Util.animation(tvfw1);
                     flag1 = false;
 
                 }
-                if (!checkInput.checkPassWord(password1)) {
+                if (!CheckInputForm1.checkPassWord(password1)) {
                     et2.setBackgroundResource(R.drawable.round_edit_text_2);
-                    animation(tvfw2);
+                    Util.animation(tvfw2);
                     flag2 = false;
                 }
                 if (!password1.equals(password2)) {
                     et3.setBackgroundResource(R.drawable.round_edit_text_2);
-                    animation(tvfw3);
+                    Util.animation(tvfw3);
                     flag3 = false;
                 }
                 if (flag1) et1.setBackgroundResource(R.drawable.round_edit_text);
@@ -74,13 +69,4 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-    public void animation(TextView tv) {
-        AlphaAnimation dis = new AlphaAnimation(1.0f, 0.0f);
-        tv.startAnimation(dis);
-        dis.setDuration(2000);
-
-    }
-
-
 }
