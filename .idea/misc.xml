@@ -3,7 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/HelloAndroid/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1515" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/HelloAndroid/app/src/main/res/drawable/round_edit_text.xml" value="0.1515" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/HelloAndroid/app/src/main/res/drawable/round_edit_text_2.xml" value="0.1515" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/HelloAndroid/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/HelloAndroid/app/src/main/res/layout/form1.xml" value="0.23738738738738738" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/HelloAndroid/app/src/main/res/layout/form2.xml" value="0.23738738738738738" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/HelloAndroid/app/src/main/res/layout/form3.xml" value="0.23738738738738738" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/HelloAndroid/app/src/main/res/layout/layout1.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/HelloAndroid/app/src/main/res/layout/linearlayout.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/HelloAndroid/app/src/main/res/layout/relativelayout.xml" value="0.27447916666666666" />
       </map>
     </option>
   </component>
